@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brand.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="container header-top flex items-center justify">
+                    <div class="flex items-center site-brand-wrapper">
+                        <button type="button" class="sidebar-open-btn--ms">
+                            <img src="./assets/icons/menu.svg" alt="" />
+                        </button>
+                        <a href="index.html" class="site-brand flex items-center">
+                            <!-- <img src="./assets/icons/site_logo.svg" class="brand-icon" /> -->
+                            <span class="brand-text">Com<span>pras.</span></span>
+                        </a>
+                    </div>
+                    
+                    <form class="hdr-search-bar flex items-stretch w-full hide-on--ms border-radius-6 overflow-hidden">
+                        <span class="search-icon flex items-center justify-center"><img src="./assets/icons/search_gray.svg" /></span>
+                        <input type="text" placeholder="Search" />
+                        <div class="select-wrapper flex items-center hide-on--ms">
+                            <select>
+                                <option>All Category</option>
+                                <option>Accessories</option>
+                                <option>Gadgets</option>
+                                <option>Clothing</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="searchbar-btn text-white flex items-center text-center justify-center w-full hide-on--ms">Search</button>
+                    </form>
+
+                    <div class="hdr-navigation-bar--ms flex items-center hide show-on--ms">
+                        <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/shopping_cart.svg" /></a>
+                        <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/person.svg" /></a>
+                    </div>
+
+                    <ul class="hdr-navigation-bar flex items-end hide-on--ms">
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/profile.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Profile</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/message.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Message</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/heart.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Orders</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/cart.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">My Cart</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation hide-on--ms">
+                <div class="navigation-content container flex items-center justify-between">
+                    <div class="navigation-left flex items-center">
+                        <button type="button" class="sidenav-show-btn">
+                            <img src="./assets/icons/menu.svg" />
+                        </button>
+                        <ul class="navigation-menu flex items-center">
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">All category</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Hot offers</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Gift boxes</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Discounts</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Watchlist</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark flex items-center no-wrap">Help <img src="./assets/icons/chevron_down.svg" class="menu-dropdown-icon" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation-right flex items-center">
+                        <div class="currency-options">
+                            <div class="selected currency-option flex items-center">
+                                <div class="option-text font-medium text-dark no-wrap text-sm">English, USD</div>
+                                <span class="option-icon">
+                                    <img src="./assets/icons/chevron_down.svg" />
+                                </span>
+                            </div>
+                            <div class="currency-options-list bg-white">
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">India, INR</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">Nepal, NPR</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">France, FRANC</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">Canada, Canadian Dollar</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="selected shipping-option flex items-center">
+                                <div class="option-text font-medium text-dark no-wrap text-sm">Ship to</div>
+                                <span class="option-img">
+                                    <img src="./assets/images/flag1.png" />
+                                </span>
+                                <span class="option-icon">
+                                    <img src="./assets/icons/chevron_down.svg" />
+                                </span>
+                            </div>
+
+                            <div class="shipping-options-list bg-white">
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">us</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/usa.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">au</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/australia.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">dk</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/denmark.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">cn</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/china.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">fr</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/france.png" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="home-page">
+            <section class="top-main">
+                <div class="container">
+                    <div class="top-main-content border-radius-6 border-gray-300 grid theme-p">
+                        <div class="categories-list scrollbar-x">
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center active">Automobiles</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Clothes and wear</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Home interiors</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Computer and tech</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Tools & equipments</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Sports and outdoor</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Animal and pets</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">Machinery tools</a>
+                            <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">More category</a>
+                        </div>
+    
+                        <div class="banner-slider">
+                            <div class="slider-item h-full">
+                                <img src="./assets/images/banner.png" alt="" />
+                                <div class="slider-item-content">
+                                    <p class="slider-item-text font-semibold">Latest trending</p>
+                                    <h2 class="slider-item-title font-bold">Electronic items</h2>
+                                    <a href="" class="btn btn-white">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="slider-item h-full">
+                                <img src="./assets/images/banner2.jpg" alt=""/>
+                                <div class="slider-item-content">
+                                    <p class="slider-item-text font-semibold">Latest trending</p>
+                                    <h2 class="slider-item-title font-bold">Electronic items</h2>
+                                    <a href="" class="btn btn-white">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="offers grid">
+                            <div class="offers-block-join border-radius-6">
+                                <div class="join-user grid items-center">
+                                    <div class="avatar"><img src="./assets/icons/avatar.svg" /></div>
+                                    <p class="text text-dark">Hi, user let's get started.</p>
+                                </div>
+                                <div class="btn-group flex flex-col">
+                                    <a href="#" class="btn btn-sm btn-sm-blue">Join now</a>
+                                    <a href="#" class="btn btn-sm btn-sm-white">Log in</a>
+                                </div>
+                            </div>
+                            <div class="offers-block-off bg-orange text-white text border-radius-6 flex items-center">Get US
+                                $10 off with a new supplier</div>
+                            <div class="offers-block-quote bg-verdigris text-white text border-radius-6 flex items-center">
+                                Send quotes with supplier preferences</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sc-deals">
+                <div class="container">
+                    <div class="deals-content grid border-gray-300 border-radius-6">
+                        <div class="deals-countdown theme-p">
+                            <div class="deals-title">
+                                <h4 class="text-lg text-dark deals-countdown-title">Deals and offers</h4>
+                                <p class="text text-gray-500">Hygiene equipments</p>
+                            </div>
+                            <div class="countdown-elems grid">
+                                <div
+                                    class="countdown-elem text-center border-radius-6 flex flex-col items-center justify-center">
+                                    <span class="countdown-elem-value font-bold text text-gray-500">04</span>
+                                    <span class="countdown-elem-unit text-gray-500 text-xs">Days</span>
+                                </div>
+                                <div
+                                    class="countdown-elem text-center border-radius-6 flex flex-col items-center justify-center">
+                                    <span class="countdown-elem-value font-bold text text-gray-500">13</span>
+                                    <span class="countdown-elem-unit text-gray-500 text-xs">Hour</span>
+                                </div>
+                                <div
+                                    class="countdown-elem text-center border-radius-6 flex flex-col items-center justify-center">
+                                    <span class="countdown-elem-value font-bold text text-gray-500">34</span>
+                                    <span class="countdown-elem-unit text-gray-500 text-xs">Min</span>
+                                </div>
+                                <div
+                                    class="countdown-elem text-center border-radius-6 flex flex-col items-center justify-center">
+                                    <span class="countdown-elem-value font-bold text text-gray-500">56</span>
+                                    <span class="countdown-elem-unit text-gray-500 text-xs">Sec</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deals-products offers-slider w-full overflow-hidden">
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center overflow-hidden"><img
+                                        src="./assets/images/product-1.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">Smart watches</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center"><img
+                                        src="./assets/images/product-2.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">Laptops</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center"><img
+                                        src="./assets/images/product-3.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">GoPro cameras</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center"><img
+                                        src="./assets/images/product-1.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">Smart watches</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center"><img
+                                        src="./assets/images/product-4.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">Headphones</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                            <div class="deals-item text-center">
+                                <div class="item-img flex items-center justify-center"><img
+                                        src="./assets/images/product-5.png" alt="" /></div>
+                                <div class="item-info">
+                                    <p class="item-name text text-dark">Canon camreras</p>
+                                    <span class="badge badge-off text-sm">-25%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <div class="products-display-grid display-grid-one">
+                <div class="container">
+                    <div class="display-grid-content overflow-hidden grid border-radius-6 border-gray-300">
+                        <div class="products-source">
+                            <img src="./assets/images/display-grid-one-img.jpg" class="object-fit-cover" alt="">
+                            <div class="products-source-info">
+                                <p class="text-lg text-dark source-info-title font-semibold">Home and outdoor</p>
+                                <a href="#" class="btn btn-white">Source now</a>
+                            </div>
+                        </div>
+                        <div class="products-list display-slider w-full overflow-hidden">
+                            <div class="product-item">
+                                <div class="item-name">Comfy chairs</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p1.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Kitchen Mixers</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p2.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Home decors</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p3.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Blendors</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p4.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Soft chairs</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">Soft Mattress<br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p5.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Home appliance</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p6.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Decoration Pot</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p7.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Vase</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img flex items-center justify-center overflow-hidden">
+                                        <img src="./assets/images/p8.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="products-display-grid display-grid-two">
+                <div class="container">
+                    <div class="display-grid-content grid border-radius-6 border-gray-300">
+                        <div class="products-source">
+                            <img src="./assets/images/display-grid-two-img.png" alt="" class="object-fit-cover">
+                            <div class="products-source-info">
+                                <p class="text-lg text-dark source-info-title font-semibold">Consumer electronics and gadgets</p>
+                                <a href="#" class="btn btn-white">Source now</a>
+                            </div>
+                        </div>
+                        <div class="products-list display-slider w-full overflow-hidden">
+                            <div class="product-item">
+                                <div class="item-name">Smartwatches</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p9.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Camera</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p10.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Headphones</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p11.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Utensils</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p12.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Headphones</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">Soft Mattress<br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p13.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Laptops & PCs</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p14.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Mobile Devices</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p15.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="item-name">Smartphones</div>
+                                <div class="item-info flex justify-between">
+                                    <div class="item-info-text">
+                                        <p class="text-gray-500">From <br> USD 19</p>
+                                    </div>
+                                    <div class="item-info-img overflow-hidden flex items-center justify-center w-full">
+                                        <img src="./assets/images/p16.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <section class="sc-inquiry">
+                <div class="container">
+                    <div class="inquiry-content border-radius-6 grid">
+                        <div class="inquiry-text text-white">
+                            <h2 class="font-semibold">An easy way to send requests to all suppliers</h2>
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt.</p>
+                        </div>
+                        <div class="inquiry-form bg-white border-radius-6">
+                            <form>
+                                <p class="form-title text-lg text-dark font-semibold">Send quote to suppliers</p>
+                                <div class="form-elem">
+                                    <input type="text" class="form-elem-control" placeholder="What item you need?">
+                                </div>
+                                <div class="form-elem">
+                                    <textarea placeholder="Type more details" class="form-elem-control"></textarea>
+                                </div>
+                                <div class="form-elems grid">
+                                    <div class="form-elem">
+                                        <input type="text" class="form-elem-control" placeholder="Quantity">
+                                    </div>
+                                    <div class="form-elem">
+                                        <div class="select-wrapper">
+                                            <select name="" id="" class="form-elem-control">
+                                                <option value="" selected disabled>Pcs</option>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-blue">Send inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sc-recommend">
+                <div class="container">
+                    <div class="recommend-content">
+                        <h3 class="title">Recommended Products</h3>
+                        <div class="recommend-products-list grid">
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-1.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-2.jpg" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">Jeans shorts for men blue color</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-3.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">Brown winter coatmedium size</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-4.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-5.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-6.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-7.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-8.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-9.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center">
+                                    <img src="./assets/images/recommend-10.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">$10.30</span>
+                                    <p class="text text-gray-500">T-shirts with multiple colors, for men</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sc-services">
+                <div class="container">
+                    <h3 class="title">Our extra services</h3>
+                    <div class="services-content grid">
+                        <div class="services-item overflow-hidden border-gray-200 border-radius-6">
+                            <div class="services-item-img">
+                                <img src="./assets/images/service-1.png" alt="" />
+                            </div>
+                            <div class="services-item-info theme-p">
+                                <div class="services-item-icon flex items-center justify-center">
+                                    <img src="./assets/icons/search.svg" />
+                                </div>
+                                <p class="services-item-title font-medium text text-dark">Source from Industry Hubs</p>
+                            </div>
+                        </div>
+                        <div class="services-item overflow-hidden border-gray-200 border-radius-6">
+                            <div class="services-item-img">
+                                <img src="./assets/images/service-2.png" alt="" />
+                            </div>
+                            <div class="services-item-info theme-p">
+                                <div class="services-item-icon flex items-center justify-center">
+                                    <img src="./assets/icons/inventory.svg" />
+                                </div>
+                                <p class="services-item-title font-medium text text-dark">Customize Your Products</p>
+                            </div>
+                        </div>
+                        <div class="services-item overflow-hidden border-gray-200 border-radius-6">
+                            <div class="services-item-img">
+                                <img src="./assets/images/service-3.png" alt="" />
+                            </div>
+                            <div class="services-item-info theme-p">
+                                <div class="services-item-icon flex items-center justify-center">
+                                    <img src="./assets/icons/send.svg" />
+                                </div>
+                                <p class="services-item-title font-medium text text-dark">Fast, reliable shipping by ocean or air</p>
+                            </div>
+                        </div>
+                        <div class="services-item overflow-hidden border-gray-200 border-radius-6">
+                            <div class="services-item-img">
+                                <img src="./assets/images/service-4.png" alt="" />
+                            </div>
+                            <div class="services-item-info theme-p">
+                                <div class="services-item-icon flex items-center justify-center">
+                                    <img src="./assets/icons/security.svg" />
+                                </div>
+                                <p class="services-item-title font-medium text text-dark">Product monitoring and inspection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sc-suppliers">
+                <div class="container">
+                    <h3 class="title">Suppliers by region</h3>
+                    <div class="suppliers-content grid">
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/arab_emirates.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Arabic Emirates</p>
+                                <p class="text-sm text-gray-500">shopname.ae</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/australia.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Australia</p>
+                                <p class="text-sm text-gray-500">shopname.au</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/usa.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">United States</p>
+                                <p class="text-sm text-gray-500">shopname.us</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/russia.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Russia</p>
+                                <p class="text-sm text-gray-500">shopname.ru</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/italy.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Italy</p>
+                                <p class="text-sm text-gray-500">shopname.it</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/denmark.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Denmark</p>
+                                <p class="text-sm text-gray-500">shopname.de</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/france.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">France</p>
+                                <p class="text-sm text-gray-500">shopname.fr</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/china.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">China</p>
+                                <p class="text-sm text-gray-500">shopname.ae</p>
+                            </div>
+                        </div>
+                        <div class="suppliers-item grid items-center">
+                            <div class="suppliers-item-img">
+                                <img src="./assets/images/britian.png" alt="" />
+                            </div>
+                            <div class="suppliers-item-info">
+                                <p class="text text-dark">Britain</p>
+                                <p class="text-sm text-gray-500">shopname.ae</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="newsletter">
+                <div class="container">
+                    <div class="newsletter-content text-center">
+                        <h4 class="text-lg text-dark">Subscribe on our newsletter</h4>
+                        <p class="text text-gray-800">Get daily news on upcoming offers from many suppliers all over the world</p>
+                        <form class="flex items-center justify-center newsletter-form">
+                            <div class="form-elem-group grid items-center">
+                                <span class="form-elem-icon flex items-center justify-center">
+                                    <img src="./assets/icons/email.svg" />
+                                </span>
+                                <input type="text" placeholder="Email" class="form-elem-control">
+                            </div>
+                            <button type="submit" class="btn btn-blue">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-white">
+            <div class="container">
+                <div class="footer-content grid">
+                    <div class="footer-item">
+                        <a href="#" class="site-brand flex items-center">
+                            <img src="./assets/icons/site_logo.svg" class="brand-icon" />
+                            <img src="./assets/icons/brand.svg" class="brand-text" />
+                        </a>
+                        <p class="text text-gray-600 brand-intro text-base">Best information about the company gies here but now lorem ipsum is</p>
+                        <ul class="social-links flex">
+                            <li><a href="#"><img src="./assets/icons/facebook.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/twiitter.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/linkedin.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/instagram.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/youtube.svg" /></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">About</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text">About Us</a>
+                            <a href="#" class="text-gray-500 text">Find store</a>
+                            <a href="#" class="text-gray-500 text">Categories</a>
+                            <a href="#" class="text-gray-500 text">Blogs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Partnership</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text">Our Partners</a>
+                            <a href="#" class="text-gray-500 text">Branches</a>
+                            <a href="#" class="text-gray-500 text">Suppliers</a>
+                            <a href="#" class="text-gray-500 text">Programs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Information</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text">Help Center</a>
+                            <a href="#" class="text-gray-500 text">Money Refund</a>
+                            <a href="#" class="text-gray-500 text">Shipping</a>
+                            <a href="#" class="text-gray-500 text">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">For users</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text">Login</a>
+                            <a href="#" class="text-gray-500 text">Register</a>
+                            <a href="#" class="text-gray-500 text">Settings</a>
+                            <a href="#" class="text-gray-500 text">My Orders</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Get app</p>
+                        <div class="store-links flex flex-col">
+                            <a href="#" class="store-link"><img src="./assets/icons/app_store.png" /></a>
+                            <a href="#" class="store-link"><img src="./assets/icons/google_play.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="footer-text text-gray-800">&copy; 2023 Ecommerce.</p>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="sidenav bg-white">
+        <button type="button" class="sidenav-hide-btn">
+            <i class="fas fa-close"></i>
+        </button>
+        <div class="sidenav-wrapper">
+            <div class="sidenav-top grid">
+                <div class="avatar">
+                    <img src="./assets/images/avatar.jpg" alt="" />
+                </div>
+                <div class="links-group">
+                    <a href="#" class="text-dark text text-base">Sign in</a>
+                    <span>|</span>
+                    <a href="#" class="text-dark text text-base">Register</a>
+                </div>
+            </div>
+
+            <div class="sidenav-main">
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-list"></i></span>
+                    <span class="text text-base text-dark">Home</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-home"></i></span>
+                    <span class="text text-base text-dark">Categories</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fa-regular fa-heart"></i></span>
+                    <span class="text text-base text-dark">Favorites</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-box"></i></span>
+                    <span class="text text-base text-dark">My orders</span>
+                </a>
+                <div class="sidenav-item-separator"></div>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-globe"></i></span>
+                    <span class="text text-base text-dark">English | USD</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-headphones"></i></span>
+                    <span class="text text-base text-dark">Contact us</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-building"></i></span>
+                    <span class="text text-base text-dark">About</span>
+                </a>
+                <div class="sidenav-item-separator"></div>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">User agreement</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">Partnership</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">Privacy policy</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>

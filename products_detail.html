@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brand.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="container header-top flex items-center justify">
+                    <div class="flex items-center site-brand-wrapper">
+                        <button type="button" class="sidebar-open-btn--ms">
+                            <img src="./assets/icons/menu.svg" alt="" />
+                        </button>
+                        <a href="index.html" class="site-brand flex items-center">
+                            <!-- <img src="./assets/icons/site_logo.svg" class="brand-icon" /> -->
+                            <span class="brand-text">Com<span>pras.</span></span>
+                        </a>
+                    </div>
+
+                    <form class="hdr-search-bar flex items-stretch w-full hide-on--ms">
+                        <span class="search-icon flex items-center justify-center"><img
+                                src="./assets/icons/search_gray.svg" /></span>
+                        <input type="text" placeholder="Search" />
+                        <div class="select-wrapper flex items-center hide-on--ms">
+                            <select>
+                                <option>All Category</option>
+                                <option>Accessories</option>
+                                <option>Gadgets</option>
+                                <option>Clothing</option>
+                            </select>
+                        </div>
+                        <button type="submit"
+                            class="searchbar-btn text-white flex items-center text-center justify-center w-full hide-on--ms">Search</button>
+                    </form>
+
+                    <div class="hdr-navigation-bar--ms flex items-center hide show-on--ms">
+                        <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/shopping_cart.svg" /></a>
+                        <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/person.svg" /></a>
+                    </div>
+
+                    <ul class="hdr-navigation-bar flex items-end hide-on--ms">
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/profile.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Profile</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/message.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Message</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/heart.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">Orders</span>
+                        </li>
+                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                            <div class="hdr-nav-icon flex items-center justify-center">
+                                <img src="./assets/icons/cart.svg" />
+                            </div>
+                            <span class="text-xs text-gray-500 text-center hdr-nav-text">My Cart</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation hide-on--ms">
+                <div class="navigation-content container flex items-center justify-between">
+                    <div class="navigation-left flex items-center">
+                        <button type="button" class="sidenav-show-btn">
+                            <img src="./assets/icons/menu.svg" />
+                        </button>
+                        <ul class="navigation-menu flex items-center">
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">All
+                                    category</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Hot
+                                    offers</a></li>
+                            <li class="menu-item"><a href="#"
+                                    class="menu-link font-semibold text text-dark no-wrap">Gift boxes</a></li>
+                            <li class="menu-item"><a href="#"
+                                    class="menu-link font-semibold text text-dark no-wrap">Discounts</a></li>
+                            <li class="menu-item"><a href="#"
+                                    class="menu-link font-semibold text text-dark no-wrap">Watchlist</a></li>
+                            <li class="menu-item"><a href="#"
+                                    class="menu-link font-semibold text text-dark flex items-center no-wrap">Help <img
+                                        src="./assets/icons/chevron_down.svg" class="menu-dropdown-icon" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation-right flex items-center">
+                        <div class="currency-options">
+                            <div class="currency-option flex items-center">
+                                <div class="option-text font-medium text-dark no-wrap text-sm">English, USD</div>
+                                <span class="option-icon">
+                                    <img src="./assets/icons/chevron_down.svg" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="shipping-options">
+                            <div class="shipping-option flex items-center">
+                                <div class="option-text font-medium text-dark no-wrap text-sm">Ship to</div>
+                                <span class="option-img">
+                                    <img src="./assets/images/flag1.png" />
+                                </span>
+                                <span class="option-icon">
+                                    <img src="./assets/icons/chevron_down.svg" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="details-page">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <div class="container">
+                    <nav class="breadcrumb-list flex items-center flex-wrap">
+                        <div class="breadcrumb-item"><a href="#" class="text text-base">Home</a></div>
+                        <div class="breadcrumb-separator">
+                            <img src="./assets/icons/chevron_right.png" alt="" />
+                        </div>
+                        <div class="breadcrumb-item"><a href="#" class="text text-base">Clothings</a></div>
+                        <div class="breadcrumb-separator">
+                            <img src="./assets/icons/chevron_right.png" alt="" />
+                        </div>
+                        <div class="breadcrumb-item"><a href="#" class="text text-base">Men's wear</a></div>
+                        <div class="breadcrumb-separator">
+                            <img src="./assets/icons/chevron_right.png" alt="" />
+                        </div>
+                        <div class="breadcrumb-item"><a href="#" class="text text-base">Summer Clothing</a></div>
+                    </nav>
+                </div>
+            </div>
+            <!-- end of breadcrumb -->
+
+            <div class="top-main">
+                <div class="container">
+                    <div class="top-main-content grid">
+                        <div class="details-top grid border-gray-200 border-radius-6">
+                            <div class="details-preview grid">
+                                <div class="preview-large border-radius-6 border-gray-200 flex items-center justify-center">
+                                    <img src="./assets/images/preview-large.jpg" />
+                                </div>
+                                <div class="preview-thumbnail flex items-center">
+                                    <div class="thumbnail-item border-radius-6 border-gray-200 active"><img
+                                            src="./assets/images/pre_thumb1.jpg" /></div>
+                                    <div class="thumbnail-item border-radius-6 border-gray-200"><img
+                                            src="./assets/images/pre_thumb2.jpg" /></div>
+                                    <div class="thumbnail-item border-radius-6 border-gray-200"><img
+                                            src="./assets/images/pre_thumb3.jpg" /></div>
+                                    <div class="thumbnail-item border-radius-6 border-gray-200"><img
+                                            src="./assets/images/pre_thumb4.jpg" /></div>
+                                    <div class="thumbnail-item border-radius-6 border-gray-200"><img
+                                            src="./assets/images/pre_thumb5.jpg" /></div>
+                                    <div class="thumbnail-item border-radius-6 border-gray-200"><img
+                                                src="./assets/images/pre_thumb6.jpg" /></div>
+                                </div>
+                            </div>
+                            <div class="details-top-r grid">
+                                <div class="details-product">
+                                    <p class="stock-status text text-base">
+                                        <span><i class="fas fa-check"></i></span> In stock
+                                    </p>
+                                    <p class="text text-lg details-title font-bold">Gildan Ultra Cotton Adult T-Shirt</p>
+    
+                                    <div class="details-info flex items-center flex-wrap">
+                                        <ul class="rating flex items-center">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fa-regular fa-star"></i></li>
+                                            <li class="rating-value text text-base">7.5</li>
+                                        </ul>
+                                        <div class="separator"></div>
+                                        <div class="details-review text text-base text-gray-500 flex items-center">
+                                            <span><img src="./assets/icons/message.svg" /></span>
+                                            <span class="text text-base">32 reviews</span>
+                                        </div>
+                                        <div class="separator"></div>
+                                        <div class="details-review text text-base text-gray-500 flex items-center">
+                                            <span><img src="./assets/icons/basket.png" /></span>
+                                            <span class="text text-base">154 sold</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="details-pcs grid">
+                                        <div class="psc-item flex flex-col">
+                                            <span class="psc-item-price font-semibold text-red">$98.00</span>
+                                            <span class="psc-item-value text text-sm text-gray-800">50-100 pcs</span>
+                                        </div>
+                                        <div class="psc-item flex flex-col">
+                                            <span class="psc-item-price font-semibold">$90.00</span>
+                                            <span class="psc-item-value text text-sm text-gray-800">100-700 pcs</span>
+                                        </div>
+                                        <div class="psc-item flex flex-col">
+                                            <span class="psc-item-price font-semibold">$78.00</span>
+                                            <span class="psc-item-value text text-sm text-gray-800">700+ pcs</span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="details-data">
+                                        <div class="data-row-wrapper">
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Price:</span>
+                                                <span class="data-row-d text text-base">Negotiable</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-row-wrapper">
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Brand:</span>
+                                                <span class="data-row-d text text-base">Gildan</span>
+                                            </div>
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Material: </span>
+                                                <span class="data-row-d text text-base">100% preshrunk cotton (Heather gray is 90% cotton/10% polyester)</span>
+                                            </div>
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Design: </span>
+                                                <span class="data-row-d text text-base">Modern nice</span>
+                                            </div>
+                                        </div>
+                                        <div class="data-row-wrapper">
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Customization: </span>
+                                                <span class="data-row-d text text-base">Customized logo and design custom
+                                                    packages</span>
+                                            </div>
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Protection: </span>
+                                                <span class="data-row-d text text-base">Refund Policy</span>
+                                            </div>
+                                            <div class="data-row grid">
+                                                <span class="data-row-h text text-base">Warranty: </span>
+                                                <span class="data-row-d text text-base">2 years full warranty </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details-supplier">
+                                    <div class="details-supplier-wrapper border-radius-6 border-gray-200">
+                                        <div class="supplier-intro grid">
+                                            <div class="supplier-avatar flex items-center justify-center font-semibold">R
+                                            </div>
+                                            <p class="supplier-name text-dark text text-base font-semibold">Supplier Guanjoi Trading LLC</p>
+                                        </div>
+                                        <div class="supplier-service">
+                                            <ul>
+                                                <li class="grid">
+                                                    <span
+                                                        class="supplier-service-icon flex items-center justify-center"><img
+                                                            src="./assets/images/flag1.png" /></span>
+                                                    <span
+                                                        class="supplier-service-text text-gray-500 text text-base">Germany,
+                                                        Berlin</span>
+                                                </li>
+                                                <li class="grid">
+                                                    <span
+                                                        class="supplier-service-icon flex items-center justify-center"><img
+                                                            src="./assets/icons/verified.svg" /></span>
+                                                    <span
+                                                        class="supplier-service-text text-gray-500 text text-base">Verified
+                                                        Seller</span>
+                                                </li>
+                                                <li class="grid">
+                                                    <span
+                                                        class="supplier-service-icon flex items-center justify-center"><img
+                                                            src="./assets/icons/language.svg" /></span>
+                                                    <span
+                                                        class="supplier-service-text text-gray-500 text text-base">Worldwide
+                                                        shippping</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group flex flex-col">
+                                            <a href="#" class="btn btn-blue">Send inquiry</a>
+                                            <a href="#" class="btn btn-white">Seller's profile</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-center btn-wishlist">
+                                        <a href="#" class="text text-base text-blue text-center">
+                                            <span><i class="fas fa-heart"></i></span>
+                                            Save for later
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="details-bottom grid">
+                            <div class="details-tabs border-gray-200 border-radius-6">
+                                <div class="tabs-btns flex items-center flex-wrap">
+                                    <button type="button"
+                                        class="tabs-btn text text-base font-medium text-gray-500" id="tabBtnOne" data-target="tabContentOne">Description</button>
+                                    <button type="button"
+                                        class="tabs-btn text text-base font-medium text-gray-500" id="tabBtnTwo" data-target="tabContentTwo">Reviews</button>
+                                    <button type="button"
+                                        class="tabs-btn text text-base font-medium text-gray-500" id="tabBtnThree" data-target="tabContentThree">Shipping</button>
+                                    <button type="button"
+                                        class="tabs-btn text text-base font-medium text-gray-500" id="tabBtnFour" data-target="tabContentFour">About seller</button>
+                                </div>
+
+                                <div class="tabs-contents">
+                                    <div class="tabs-content" id="tabContentOne">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna aliqua.</p>
+                                        <p>Ut enim ad minim veniam,
+                                            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. </p>
+
+                                        <ul>
+                                            <li>Some great feature name here</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur </li>
+                                            <li>Duis aute irure dolor in reprehenderit</li>
+                                            <li>Some great feature name here</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-content" id="tabContentTwo">
+                                        Review content here ...
+                                    </div>
+
+                                    <div class="tabs-content" id="tabContentThree">
+                                        Shipping content here ...
+                                    </div>
+
+                                    <div class="tabs-content" id="tabContentFour">
+                                        About Seller content here ...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-suggest border-gray-200 border-radius-6">
+                                <h3 class="suggest-title text text-base font-semibold text-dark">You may also like</h3>
+
+                                <div class="suggest-products-list grid">
+                                    <div class="product-item product-item-sm overflow-hidden border-radius-6 border-gray-200">
+                                        <div class="item-img overflow-hidden flex items-center justify-center">
+                                            <img src="./assets/images/suggest1.png" alt="" />
+                                        </div>
+                                        <div class="item-info">
+                                            <span class="text text-dark font-medium text-base">Men Blazers Sets Elegant Formal</span>
+                                            <p class="text text-gray-500 text-base">$7.00 - $99.50</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-item product-item-sm overflow-hidden border-radius-6 border-gray-200">
+                                        <div class="item-img overflow-hidden flex items-center justify-center">
+                                            <img src="./assets/images/suggest2.png" alt="" />
+                                        </div>
+                                        <div class="item-info">
+                                            <span class="text text-dark font-medium text-base">Men Shirt Sleeve Polo Contrast</span>
+                                            <p class="text text-gray-500 text-base">$7.00 - $99.50</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-item product-item-sm overflow-hidden border-radius-6 border-gray-200">
+                                        <div class="item-img overflow-hidden flex items-center justify-center">
+                                            <img src="./assets/images/suggest3.jpg" alt="" />
+                                        </div>
+                                        <div class="item-info">
+                                            <span class="text text-dark font-medium text-base">Men Blazers Sets Elegant Formal</span>
+                                            <p class="text text-gray-500 text-base">$7.00 - $99.50</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-item product-item-sm overflow-hidden border-radius-6 border-gray-200">
+                                        <div class="item-img overflow-hidden flex items-center justify-center">
+                                            <img src="./assets/images/suggest4.png" alt="" />
+                                        </div>
+                                        <div class="item-info">
+                                            <span class="text text-dark font-medium text-base">New Summer Men's  castrol T-Shirts</span>
+                                            <p class="text text-gray-500 text-base">$7.00 - $99.50</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-item product-item-sm overflow-hidden border-radius-6 border-gray-200">
+                                        <div class="item-img overflow-hidden flex items-center justify-center">
+                                            <img src="./assets/images/suggest5.png" alt="" />
+                                        </div>
+                                        <div class="item-info">
+                                            <span class="text text-dark font-medium text-base">Men Blazers Sets Elegant Formal</span>
+                                            <p class="text text-gray-500 text-base">$7.00 - $99.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="sc-related border-gray-200 border-radius-6">
+                            <div class="container">
+                                <div class="related-content">
+                                    <h3 class="title">Related Products</h3>
+                                    <div class="related-products-list related-slider">
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-1.png" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">$32.00-$40.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-2.png" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">Jeans shorts for men blue color</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-3.png" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">Brown winter coatmedium size</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-4.png" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">$32.00-$40.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-5.png" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">$32.00-$40.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                            <div class="item-img overflow-hidden flex items-center justify-center">
+                                                <img src="./assets/images/related-6.jpg" alt="" />
+                                            </div>
+                                            <div class="item-info">
+                                                <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                                <p class="text text-gray-500">$32.00-$40.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="wide-banner tex-white">
+                            <div class="wide-banner-content flex justify-between items-center">
+                                <div>
+                                    <h4 class="text text-xl text-white font-semibold">Super discount on more than 100
+                                        USD</h4>
+                                    <p class="text-white text text-base wide-banner-text">Have you ever finally just write dummy info.
+                                    </p>
+                                </div>
+                                <a href="#" class="btn btn-orange wide-banner-btn">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="newsletter">
+                <div class="container">
+                    <div class="newsletter-content text-center">
+                        <h4 class="text-lg text-dark">Subscribe on our newsletter</h4>
+                        <p class="text text-gray-800">Get daily news on upcoming offers from many suppliers all over the
+                            world</p>
+                        <form class="flex items-center justify-center newsletter-form">
+                            <div class="form-elem-group grid items-center">
+                                <span class="form-elem-icon flex items-center justify-center">
+                                    <img src="./assets/icons/email.svg" />
+                                </span>
+                                <input type="text" placeholder="Email" class="form-elem-control">
+                            </div>
+                            <button type="submit" class="btn btn-blue">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-white">
+            <div class="container">
+                <div class="footer-content grid">
+                    <div class="footer-item">
+                        <a href="#" class="site-brand flex items-center">
+                            <img src="./assets/icons/site_logo.svg" class="brand-icon" />
+                            <img src="./assets/icons/brand.svg" class="brand-text" />
+                        </a>
+                        <p class="text text-gray-600 brand-intro text-base">Best information about the company gies here
+                            but now
+                            lorem ipsum is</p>
+                        <ul class="social-links flex">
+                            <li><a href="#"><img src="./assets/icons/facebook.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/twiitter.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/linkedin.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/instagram.svg" /></a></li>
+                            <li><a href="#"><img src="./assets/icons/youtube.svg" /></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">About</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text text-base">About Us</a>
+                            <a href="#" class="text-gray-500 text text-base">Find store</a>
+                            <a href="#" class="text-gray-500 text text-base">Categories</a>
+                            <a href="#" class="text-gray-500 text text-base">Blogs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Partnership</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text text-base">Our Partners</a>
+                            <a href="#" class="text-gray-500 text text-base">Branches</a>
+                            <a href="#" class="text-gray-500 text text-base">Suppliers</a>
+                            <a href="#" class="text-gray-500 text text-base">Programs</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Information</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text text-base">Help Center</a>
+                            <a href="#" class="text-gray-500 text text-base">Money Refund</a>
+                            <a href="#" class="text-gray-500 text text-base">Shipping</a>
+                            <a href="#" class="text-gray-500 text text-base">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">For users</p>
+                        <div class="footer-links">
+                            <a href="#" class="text-gray-500 text text-base">Login</a>
+                            <a href="#" class="text-gray-500 text text-base">Register</a>
+                            <a href="#" class="text-gray-500 text text-base">Settings</a>
+                            <a href="#" class="text-gray-500 text text-base">My Orders</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-item">
+                        <p class="footer-item-title font-medium text-dark">Get app</p>
+                        <div class="store-links flex flex-col">
+                            <a href="#" class="store-link"><img src="./assets/icons/app_store.png" /></a>
+                            <a href="#" class="store-link"><img src="./assets/icons/google_play.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="footer-text text-gray-800">&copy; 2023 Ecommerce.</p>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="sidenav bg-white">
+        <button type="button" class="sidenav-hide-btn">
+            <i class="fas fa-close"></i>
+        </button>
+        <div class="sidenav-wrapper">
+            <div class="sidenav-top grid">
+                <div class="avatar">
+                    <img src="./assets/images/avatar.jpg" alt="" />
+                </div>
+                <div class="links-group">
+                    <a href="#" class="text-dark text text-base">Sign in</a>
+                    <span>|</span>
+                    <a href="#" class="text-dark text text-base">Register</a>
+                </div>
+            </div>
+
+            <div class="sidenav-main">
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-list"></i></span>
+                    <span class="text text-base text-dark">Home</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-home"></i></span>
+                    <span class="text text-base text-dark">Categories</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fa-regular fa-heart"></i></span>
+                    <span class="text text-base text-dark">Favorites</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-box"></i></span>
+                    <span class="text text-base text-dark">My orders</span>
+                </a>
+                <div class="sidenav-item-separator"></div>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-globe"></i></span>
+                    <span class="text text-base text-dark">English | USD</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-headphones"></i></span>
+                    <span class="text text-base text-dark">Contact us</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span class="sidenav-item-icon"><i class="fas fa-building"></i></span>
+                    <span class="text text-base text-dark">About</span>
+                </a>
+                <div class="sidenav-item-separator"></div>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">User agreement</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">Partnership</span>
+                </a>
+                <a href="#" class="sidenav-item grid">
+                    <span></span>
+                    <span class="text text-base text-dark">Privacy policy</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>
