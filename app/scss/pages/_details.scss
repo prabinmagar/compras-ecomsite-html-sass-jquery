@@ -32,10 +32,7 @@
   }
 
   .preview-large {
-    overflow: hidden;
     height: 450px;
-    overflow: hidden;
-
     @include breakpoint-down(lg){
       border: none;
     }
@@ -53,26 +50,10 @@
 
   .preview-thumbnail {
     justify-content: space-between;
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: $gray-400;
-    }
-
     .thumbnail-item {
       min-width: 68px;
       width: 68px;
       height: 68px;
-      overflow: hidden;
       cursor: pointer;
       padding: 2px;
       margin-right: 2px;
@@ -103,7 +84,6 @@
 
   .details-pcs {
     background-color: #fff0df;
-    padding: 16px;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
     margin-top: 14px;
@@ -194,6 +174,7 @@
         font-size: 28px;
       }
     }
+
     .supplier-service {
       padding: 14px 0;
       li {
@@ -206,6 +187,7 @@
           column-gap: 6px;
         }
       }
+
       &-icon {
         width: 20px;
         height: 20px;
@@ -252,9 +234,7 @@
 
   .sc-related {
     padding: 20px 0;
-    width: 100%;
-    overflow: hidden;
-
+    
     .product-item {
       border: none;
       padding: 0;
@@ -263,7 +243,6 @@
 
       .item-img {
         background-color: #eee;
-        border-radius: 6px;
         width: 100%;
         img {
           max-width: 150px;
@@ -282,8 +261,6 @@
   }
 
   .details-suggest{
-    padding: 20px 16px;
-
     .suggest-products-list{
       padding: 20px 0;
       gap: 16px;
@@ -309,5 +286,13 @@
       row-gap: 16px;
       text-align: center;
     }
+  }
+
+  @include breakpoint-down(lg){
+    padding: 20px 22px;
+  }
+
+  @include breakpoint-down(sm){
+    padding: 16px 18px;
   }
 }

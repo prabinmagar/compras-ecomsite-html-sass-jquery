@@ -17,10 +17,6 @@
     
     .brand-text {
       font-size: 24px;
-      font-weight: 700;
-      span{
-        color: $blue;
-      }
       @include breakpoint-down(lg) {
         font-size: 20px;
       }
@@ -28,8 +24,6 @@
   }
   
   .header {
-    justify-content: space-between;
-  
     &-content {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -120,6 +114,7 @@
   
     .hdr-navigation-bar--ms {
       margin-left: auto;
+      display: none;
   
       .hdr-nav-item--ms {
         margin-left: 20px;

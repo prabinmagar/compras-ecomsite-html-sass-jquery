@@ -80,27 +80,11 @@
     top: calc(100% + 5px);
     right: 0;
     width: auto;
-    border: 1px solid $gray-200;
-    border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     padding: 6px 10px;
     z-index: 10;
     min-height: 200px;
     max-height: 400px;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-track {
-      border-radius: 10px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: $gray-400;
-    }
 
     .currency-option, .shipping-option{
       cursor: pointer;

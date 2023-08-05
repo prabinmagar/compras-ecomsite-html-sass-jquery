@@ -14,7 +14,6 @@
     }
 
     &-list{
-        padding: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
 
@@ -47,7 +46,6 @@
         .item-img{
             width: 80px;
             height: 80px;
-            overflow: hidden;
             padding: 10px;
 
             img{
@@ -69,10 +67,7 @@
         }
 
         .item-summary{
-            display: flex;
-            flex-direction: column;
             row-gap: 12px;
-            align-items: flex-end;
 
             @include breakpoint-down(sm){
                 grid-column-start: 1;
@@ -87,12 +82,13 @@
             order: 2;
         }
 
+        .item-details{
+            position: relative;
+            padding-right: 10px;
+        }
+
         .item-qty{
             height: 40px;
-            display: flex;
-            align-items: stretch;
-            border: 1px solid $gray-300;
-            border-radius: 6px;
 
             @include breakpoint-down(lg){
                 height: 32px;
@@ -129,8 +125,7 @@
     }
 
     &-actions{
-        gap: 8px;
-        .btn{
+        .cart-action-btn{
             border: 1px solid $gray-300;
         }
         .action-remove{
@@ -143,11 +138,49 @@
         }
         .action-save{
             color: $blue;
-
             &:hover{
                 background-color: $blue;
                 border-color: $blue;
                 color: $white;
+            }
+        }
+
+        .btn-action-view{
+            display: none;
+            padding-left: 2px;
+            padding-right: 2px;
+
+            @include breakpoint-down(sm){
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        &-wrapper{
+            gap: 8px;
+
+            @include breakpoint-down(sm){
+                display: none;
+                position: absolute;
+                top: 26px;
+                right: 0;
+                background-color: $gray-100;
+                border: 1px solid $gray-300;
+                border-radius: 6px;
+                padding: 6px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 2px;
+
+                .cart-action-btn{
+                    border: none;
+                    box-shadow: none;
+                    height: 26px;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
             }
         }
     }
@@ -156,14 +189,6 @@
         margin: 20px 0;
         box-shadow: 0px 4px 10px rgba(56, 56, 56, 0.10);
         row-gap: 12px;
-
-        .coupon{
-            padding: 20px 16px;
-        }
-
-        &-details{
-            padding: 20px 16px;
-        }
 
         .summary-item{
             margin-top: 3px;
@@ -241,3 +266,30 @@
         }
     }
 }
+
+.sc-saved {
+    padding: 20px 0;
+
+    .product-item {
+      border: none;
+      padding: 0;
+      margin-right: 4px;
+      margin-left: 4px;
+
+      .item-img {
+        background-color: #eee;
+        img {
+          max-width: 150px;
+        }
+
+        @include breakpoint-down(sm){
+            margin-right: auto;
+            margin-left: auto;
+        }
+      }
+
+      @include breakpoint-down(sm){
+        text-align: center;
+      }
+    }
+  }

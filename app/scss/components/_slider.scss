@@ -1,6 +1,7 @@
 .offers-slider,
 .display-slider,
-.related-slider {
+.related-slider,
+.saved-slider {
   .slick-prev {
     left: 8px;
     position: absolute;
@@ -13,8 +14,8 @@
     align-items: center;
     justify-content: center;
 
-    .slick-icon{
-        padding-right: 1px;
+    .slick-icon {
+      padding-right: 1px;
     }
 
     &::before {
@@ -35,12 +36,12 @@
     align-items: center;
     justify-content: center;
 
-    &:hover{
+    &:hover {
       background-color: $gray-400;
     }
 
-    .slick-icon{
-        padding-left: 1px;
+    .slick-icon {
+      padding-left: 1px;
     }
 
     &::before {
@@ -49,36 +50,37 @@
     }
   }
 
-  .slick-icon{
+  .slick-icon {
     width: 14px;
     opacity: 0.4;
     transition: $default-transition;
 
-    &:hover{
-        opacity: 1;
+    &:hover {
+      opacity: 1;
     }
   }
 }
 
-.display-slider{
-    .slick-track, .slick-list{
-        height: 100%;
-    }
+.display-slider {
+  .slick-track,
+  .slick-list {
+    height: 100%;
+  }
 
-    .slick-list{
-        margin: 0 40px;
-        overflow: hidden;
-    }
+  .slick-list {
+    margin: 0 40px;
+    overflow: hidden;
+  }
 }
 
-.banner-slider{
-  margin-bottom: 0!important;
-  .slick-dots{
+.banner-slider {
+  margin-bottom: 0 !important;
+  .slick-dots {
     bottom: 16px;
 
-    li{
-      button{
-        &::before{
+    li {
+      button {
+        &::before {
           font-size: 15px;
         }
       }

@@ -102,6 +102,44 @@ $(document).ready(function () {
     ],
   });
 
+  $(".saved-slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow:
+      "<button type='button' class='slick-prev'><img class='slick-icon' src='./assets/icons/chevron_left.png' /></button>",
+    nextArrow:
+      "<button type='button' class='slick-next'><img class='slick-icon' src='./assets/icons/chevron_right.png' /></button>",
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   $(".display-slider").slick({
     dots: false,
     infinite: true,
@@ -170,6 +208,11 @@ $(document).ready(function () {
     sidenav.addClass("show");
   });
 
+  $(document).on('click', ".sidebar-open-btn--ms", function(event){
+    event.stopPropagation();
+    sidenav.addClass('show');
+  })
+
   $(document).on("click", ".sidenav-hide-btn", function () {
     sidenav.removeClass("show");
   });
@@ -206,18 +249,24 @@ $(document).ready(function () {
     }
   });
 
-  let shippingOptions = $('.shipping-options');
-  let shippingOptionsList = $('.shipping-options-list');
+  let shippingOptions = $(".shipping-options");
+  let shippingOptionsList = $(".shipping-options-list");
 
-  $(shippingOptions).click(function(event){
+  $(shippingOptions).click(function (event) {
     event.stopPropagation();
-    $(shippingOptionsList).toggleClass('show');
-    $(shippingOptionsList).find('.shipping-option').each(function(index, shippingElem){
-      $(shippingElem).click(function(){
-        let shippingFlagUrl = $(shippingElem).find('.option-img img').attr('src');
-        $(".selected.shipping-option").find('.option-img img').attr('src', shippingFlagUrl);
-      })
-    })
+    $(shippingOptionsList).toggleClass("show");
+    $(shippingOptionsList)
+      .find(".shipping-option")
+      .each(function (index, shippingElem) {
+        $(shippingElem).click(function () {
+          let shippingFlagUrl = $(shippingElem)
+            .find(".option-img img")
+            .attr("src");
+          $(".selected.shipping-option")
+            .find(".option-img img")
+            .attr("src", shippingFlagUrl);
+        });
+      });
   });
 
   $(document).on("click", function (event) {
@@ -230,97 +279,122 @@ $(document).ready(function () {
   });
 
   // filter tags pills
-  const filterTagsList = $('.filter-tags-list');
-  $(filterTagsList).find('.tag-item').each(function(index, tagItem){
-    $(tagItem).find('button').on('click', function(event){
-      $(tagItem).remove();
-      checkFilterTagsList();
-    })
-  });
+  const filterTagsList = $(".filter-tags-list");
+  $(filterTagsList)
+    .find(".tag-item")
+    .each(function (index, tagItem) {
+      $(tagItem)
+        .find("button")
+        .on("click", function (event) {
+          $(tagItem).remove();
+          checkFilterTagsList();
+        });
+    });
 
   const checkFilterTagsList = () => {
-    if(!filterTagsList || $(filterTagsList).find('.tag-item').length == 0){
-      $(filterTagsList).find('.btn-clear-filters').addClass('hide');
+    if (!filterTagsList || $(filterTagsList).find(".tag-item").length == 0) {
+      $(filterTagsList).find(".btn-clear-filters").addClass("hide");
     }
-  }
+  };
 
-  $('.btn-clear-filters').on('click', function(){
-    $(filterTagsList).find('.tag-item').each(function(index, tagItem){
-      $(tagItem).remove();
-    })
+  $(".btn-clear-filters").on("click", function () {
+    $(filterTagsList)
+      .find(".tag-item")
+      .each(function (index, tagItem) {
+        $(tagItem).remove();
+      });
     checkFilterTagsList();
   });
 
   checkFilterTagsList();
 
   // product view toggle
-  const productsBlockList = $('.products-block-list');
+  const productsBlockList = $(".products-block-list");
 
-  if($(productsBlockList).hasClass('products-gridview')){
-    $('.btn-gridview').addClass('active');
+  if ($(productsBlockList).hasClass("products-gridview")) {
+    $(".btn-gridview").addClass("active");
   }
 
-  if($(productsBlockList).hasClass('products-listview')){
-    $('.btn-listview').addClass('active');
+  if ($(productsBlockList).hasClass("products-listview")) {
+    $(".btn-listview").addClass("active");
   }
 
-  $('.btn-gridview').on('click', function(){
-    if($(productsBlockList).hasClass('products-listview')){
-      $(productsBlockList).removeClass('products-listview');
+  $(".btn-gridview").on("click", function () {
+    if ($(productsBlockList).hasClass("products-listview")) {
+      $(productsBlockList).removeClass("products-listview");
     }
-    $(productsBlockList).addClass('products-gridview');
+    $(productsBlockList).addClass("products-gridview");
   });
 
-  $('.btn-listview').on('click', function(){
-    if($(productsBlockList).hasClass('products-gridview')){
-      $(productsBlockList).removeClass('products-gridview');
+  $(".btn-listview").on("click", function () {
+    if ($(productsBlockList).hasClass("products-gridview")) {
+      $(productsBlockList).removeClass("products-gridview");
     }
-    $(productsBlockList).addClass('products-listview');
+    $(productsBlockList).addClass("products-listview");
   });
 
   // product preview
-  const previewThumbnails = $('.preview-thumbnail .thumbnail-item');
+  const previewThumbnails = $(".preview-thumbnail .thumbnail-item");
 
-  $(previewThumbnails).each(function(index, thumbnailItem){
-    $(thumbnailItem).click(function(){
-      $(previewThumbnails).removeClass('active');
-      $(this).addClass('active');
-      let thumbanilItemUrl = $(this).find('img').attr('src');
-      $('.preview-large').find('img').attr('src', thumbanilItemUrl);
+  $(previewThumbnails).each(function (index, thumbnailItem) {
+    $(thumbnailItem).click(function () {
+      $(previewThumbnails).removeClass("active");
+      $(this).addClass("active");
+      let thumbanilItemUrl = $(this).find("img").attr("src");
+      $(".preview-large").find("img").attr("src", thumbanilItemUrl);
     });
   });
 
   // product details tab
-  const tabsBtns = $('.tabs-btns .tabs-btn');
-  const tabsContents = $('.tabs-contents .tabs-content');
+  const tabsBtns = $(".tabs-btns .tabs-btn");
+  const tabsContents = $(".tabs-contents .tabs-content");
   let tabActiveBtn = "tabBtnOne";
 
   const showTargetContent = (targetId) => {
-    $(tabsContents).each(function(index, tabContentElem){
-      if(tabContentElem.id === targetId){
-        $(tabContentElem).addClass('show');
+    $(tabsContents).each(function (index, tabContentElem) {
+      if (tabContentElem.id === targetId) {
+        $(tabContentElem).addClass("show");
       } else {
-        $(tabContentElem).removeClass('show');
+        $(tabContentElem).removeClass("show");
       }
     });
-  }
+  };
 
   const initDetailsTabs = () => {
-    $(tabsBtns).each(function(index, tabBtnElem){
-      if(tabBtnElem.id === tabActiveBtn){
-        $(tabBtnElem).addClass('active');
-        let targetContentId = $(tabBtnElem).data('target');
+    $(tabsBtns).each(function (index, tabBtnElem) {
+      if (tabBtnElem.id === tabActiveBtn) {
+        $(tabBtnElem).addClass("active");
+        let targetContentId = $(tabBtnElem).data("target");
         showTargetContent(targetContentId);
       }
     });
-  }
+  };
 
-  $(tabsBtns).each(function(index, tabBtnElem){
-    $(tabBtnElem).click(function(){
-      let targetContentId = $(this).data('target');
+  $(tabsBtns).each(function (index, tabBtnElem) {
+    $(tabBtnElem).click(function () {
+      let targetContentId = $(this).data("target");
       showTargetContent(targetContentId);
-    }); 
+    });
   });
 
   initDetailsTabs();
+
+  // cart actions
+  const actionViewBtns = $(".btn-action-view");
+  $(actionViewBtns).each(function (index, actionViewBtn) {
+    $(actionViewBtn).click(function () {
+      let cartActionsWrapper = $(actionViewBtn).next();
+      $(cartActionsWrapper).toggleClass("show-flex");
+    });
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !$(".cart-actions").is(event.target) &&
+      $(".cart-actions").has(event.target).length === 0
+    ) {
+      $(".cart-actions-wrapper").removeClass("show-flex");
+    }
+  });
 });
+

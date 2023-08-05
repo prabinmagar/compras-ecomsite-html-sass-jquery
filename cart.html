@@ -162,10 +162,10 @@
                         <div class="cart">
                             <h3 class="cart-title text text-xl font-semibold">My Cart (3)</h3>
                             <div class="cart-content grid">
-                                <div class="cart-list border-gray-200 border-radius-6">
+                                <div class="cart-list theme-p border-gray-200 border-radius-6">
                                     <div class="cart-items grid">
                                         <div class="cart-item grid">
-                                            <div class="item-img border-radius-6 border-gray-200">
+                                            <div class="item-img border-radius-6 border-gray-200 overflow-hidden">
                                                 <img src="./assets/images/cart1.png" alt="" />
                                             </div>
                                             <div class="item-details">
@@ -177,16 +177,21 @@
                                                     <li class="text text-sm text-gray-500">Seller: Artel Market,</li>
                                                 </ul>
 
-                                                <div class="cart-actions flex items-center">
-                                                    <a class="action-remove btn btn-sm">Remove</a>
-                                                    <a class="action-save btn btn-sm">Save for later</a>
+                                                <div class="cart-actions">
+                                                    <button type="button" class="btn-action-view">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <div class="flex items-center cart-actions-wrapper">
+                                                        <a href="#" class="action-remove btn btn-sm cart-action-btn">Remove</a>
+                                                        <a href="#" class="action-save btn btn-sm cart-action-btn">Save for later</a>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="item-summary">
+                                            <div class="item-summary flex flex-col items-end">
                                                 <p class="item-price text-dark font-medium text text-base">$78.99</p>
 
-                                                <div class="item-qty">
+                                                <div class="item-qty flex items-stretch border-radius-6 border-gray-300">
                                                     <button type="button" class="item-qty-btn flex items-center justify-center text-gray-500">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
@@ -199,7 +204,7 @@
                                         </div>
 
                                         <div class="cart-item grid">
-                                            <div class="item-img border-radius-6 border-gray-200">
+                                            <div class="item-img border-radius-6 border-gray-200 overflow-hidden">
                                                 <img src="./assets/images/cart2.png" alt="" />
                                             </div>
                                             <div class="item-details">
@@ -211,16 +216,21 @@
                                                     <li class="text text-sm text-gray-500">Seller: Artel Market,</li>
                                                 </ul>
 
-                                                <div class="cart-actions flex items-center">
-                                                    <a class="action-remove btn btn-sm">Remove</a>
-                                                    <a class="action-save btn btn-sm">Save for later</a>
+                                                <div class="cart-actions">
+                                                    <button type="button" class="btn-action-view">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <div class="flex items-center cart-actions-wrapper">
+                                                        <a href="#" class="action-remove btn btn-sm cart-action-btn">Remove</a>
+                                                        <a href="#" class="action-save btn btn-sm cart-action-btn">Save for later</a>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="item-summary">
+                                            <div class="item-summary flex flex-col items-end">
                                                 <p class="item-price text-dark font-medium text text-base">$39.99</p>
 
-                                                <div class="item-qty">
+                                                <div class="item-qty flex items-stretch border-radius-6 border-gray-300">
                                                     <button type="button" class="item-qty-btn flex items-center justify-center text-gray-500">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
@@ -233,7 +243,7 @@
                                         </div>
 
                                         <div class="cart-item grid">
-                                            <div class="item-img border-radius-6 border-gray-200">
+                                            <div class="item-img border-radius-6 border-gray-200 overflow-hidden">
                                                 <img src="./assets/images/cart3.png" alt="" />
                                             </div>
                                             <div class="item-details">
@@ -245,16 +255,21 @@
                                                     <li class="text text-sm text-gray-500">Seller: Artel Market,</li>
                                                 </ul>
 
-                                                <div class="cart-actions flex items-center">
-                                                    <a class="action-remove btn btn-sm">Remove</a>
-                                                    <a class="action-save btn btn-sm">Save for later</a>
+                                                <div class="cart-actions">
+                                                    <button type="button" class="btn-action-view">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <div class="flex items-center cart-actions-wrapper">
+                                                        <a href="#" class="action-remove btn btn-sm cart-action-btn">Remove</a>
+                                                        <a href="#" class="action-save btn btn-sm cart-action-btn">Save for later</a>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="item-summary">
+                                            <div class="item-summary flex flex-col items-end">
                                                 <p class="item-price text-dark font-medium text text-base">$109.99</p>
 
-                                                <div class="item-qty">
+                                                <div class="item-qty flex items-stretch border-radius-6 border-gray-300">
                                                     <button type="button" class="item-qty-btn flex items-center justify-center text-gray-500">
                                                         <i class="fas fa-minus"></i>
                                                     </button>
@@ -276,7 +291,7 @@
                                 </div>
     
                                 <div class="cart-summary grid">
-                                    <form class="coupon border-radius-6 border-gray-200">
+                                    <form class="coupon border-radius-6 border-gray-200 theme-p">
                                         <p class="text-gray-600 text text-base coupon-title">Have a coupon?</p>
                                         <div class="input-group flex items-stretch">
                                             <input type="text" placeholder="Add coupon" class="text text-base" />
@@ -284,7 +299,7 @@
                                         </div>
                                     </form>
 
-                                    <div class="cart-summary-details border-gray-200 border-radius-6">
+                                    <div class="cart-summary-details border-gray-200 border-radius-6 theme-p">
                                         <div class="summary-item flex items-center justify-between">
                                             <span class="text text-base text-gray-600">Subtotal:</span>
                                             <span class="text text-base text-gray-600">$1403.97</span>
@@ -356,22 +371,89 @@
                                 </div>
                             </div>
                         </div>
-                        
+                    </div>
+                </div>
+            </div>
 
-                        <div class="wide-banner tex-white">
-                            <div class="wide-banner-content flex justify-between items-center">
-                                <div>
-                                    <h4 class="text text-xl text-white font-semibold">Super discount on more than 100
-                                        USD</h4>
-                                    <p class="text-white text text-base wide-banner-text">Have you ever finally just write dummy info.
-                                    </p>
+            <section class="sc-saved w-full overflow-hidden">
+                <div class="container">
+                    <div class="saved-content">
+                        <h3 class="title">Saved for later</h3>
+                        <div class="saved-products-list saved-slider">
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-1.png" alt="" />
                                 </div>
-                                <a href="#" class="btn btn-orange wide-banner-btn">Shop now</a>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">$32.00-$40.00</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-2.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">Jeans shorts for men blue color</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-3.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">Brown winter coatmedium size</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-4.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">$32.00-$40.00</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-5.png" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">$32.00-$40.00</p>
+                                </div>
+                            </div>
+                            <div class="product-item overflow-hidden border-radius-6 border-gray-200">
+                                <div class="item-img overflow-hidden flex items-center justify-center w-full border-radius-6">
+                                    <img src="./assets/images/related-6.jpg" alt="" />
+                                </div>
+                                <div class="item-info">
+                                    <span class="text text-dark font-medium">Xiaomi Redmi 8 Original</span>
+                                    <p class="text text-gray-500">$32.00-$40.00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="wide-banner tex-white">
+                        <div class="wide-banner-content flex justify-between items-center">
+                            <div>
+                                <h4 class="text text-xl text-white font-semibold">Super discount on more than 100
+                                    USD</h4>
+                                <p class="text-white text text-base wide-banner-text">Have you ever finally just write dummy info.
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-orange wide-banner-btn">Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="newsletter">
                 <div class="container">
@@ -398,8 +480,7 @@
                 <div class="footer-content grid">
                     <div class="footer-item">
                         <a href="#" class="site-brand flex items-center">
-                            <img src="./assets/icons/site_logo.svg" class="brand-icon" />
-                            <img src="./assets/icons/brand.svg" class="brand-text" />
+                            <span class="brand-text">Compras.</span>
                         </a>
                         <p class="text text-gray-600 brand-intro text-base">Best information about the company gies here
                             but now
@@ -467,8 +548,6 @@
             </div>
         </footer>
     </div>
-
-
 
     <nav class="sidenav bg-white">
         <button type="button" class="sidenav-hide-btn">
