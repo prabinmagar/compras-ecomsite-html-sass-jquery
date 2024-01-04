@@ -114,9 +114,6 @@
 
       @include breakpoint-down(sm) {
         justify-content: flex-start;
-        img {
-          max-width: 160px;
-        }
       }
     }
 

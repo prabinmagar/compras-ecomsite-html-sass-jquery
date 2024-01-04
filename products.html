@@ -20,24 +20,22 @@
 </head>
 
 <body>
-
     <div class="page-wrapper">
         <header class="header">
             <div class="header-content">
-                <div class="container header-top flex items-center justify">
+                <div class="container header-top flex items-center justify theme-py">
                     <div class="flex items-center site-brand-wrapper">
                         <button type="button" class="sidebar-open-btn--ms">
                             <img src="./assets/icons/menu.svg" alt="" />
                         </button>
                         <a href="index.html" class="site-brand flex items-center">
                             <!-- <img src="./assets/icons/site_logo.svg" class="brand-icon" /> -->
-                            <span class="brand-text">Com<span>pras.</span></span>
+                            <span class="brand-text font-bold">Com<span class="text-blue">pras.</span></span>
                         </a>
                     </div>
-
-                    <form class="hdr-search-bar flex items-stretch w-full hide-on--ms">
-                        <span class="search-icon flex items-center justify-center"><img
-                                src="./assets/icons/search_gray.svg" /></span>
+                    
+                    <form class="hdr-search-bar flex items-stretch w-full hide-on--ms border-radius-6 overflow-hidden">
+                        <span class="search-icon flex items-center justify-center"><img src="./assets/icons/search_gray.svg" /></span>
                         <input type="text" placeholder="Search" />
                         <div class="select-wrapper flex items-center hide-on--ms">
                             <select>
@@ -47,78 +45,83 @@
                                 <option>Clothing</option>
                             </select>
                         </div>
-                        <button type="submit"
-                            class="searchbar-btn text-white flex items-center text-center justify-center w-full hide-on--ms">Search</button>
+                        <button type="submit" class="searchbar-btn text-white flex items-center text-center justify-center w-full hide-on--ms">Search</button>
                     </form>
 
-                    <div class="hdr-navigation-bar--ms flex items-center hide show-on--ms">
+                    <div class="hdr-navigation-bar--ms flex items-center show-on--ms">
                         <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/shopping_cart.svg" /></a>
                         <a class="hdr-nav-item--ms" href="#"><img src="./assets/icons/person.svg" /></a>
                     </div>
 
                     <ul class="hdr-navigation-bar flex items-end hide-on--ms">
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/profile.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Profile</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/message.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Message</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/heart.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Orders</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="cart.html" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/cart.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">My Cart</span>
-                        </li>
+                        </a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="navigation hide-on--ms">
+            <div class="navigation">
                 <div class="navigation-content container flex items-center justify-between">
-                    <div class="navigation-left flex items-center">
+                    <div class="navigation-left flex items-center hide-on--ms">
                         <button type="button" class="sidenav-show-btn">
                             <img src="./assets/icons/menu.svg" />
                         </button>
                         <ul class="navigation-menu flex items-center">
-                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">All
-                                    category</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Hot
-                                    offers</a></li>
-                            <li class="menu-item"><a href="#"
-                                    class="menu-link font-semibold text text-dark no-wrap">Gift boxes</a></li>
-                            <li class="menu-item"><a href="#"
-                                    class="menu-link font-semibold text text-dark no-wrap">Discounts</a></li>
-                            <li class="menu-item"><a href="#"
-                                    class="menu-link font-semibold text text-dark no-wrap">Watchlist</a></li>
-                            <li class="menu-item"><a href="#"
-                                    class="menu-link font-semibold text text-dark flex items-center no-wrap">Help <img
-                                        src="./assets/icons/chevron_down.svg" class="menu-dropdown-icon" /></a>
-                            </li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">All category</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Hot offers</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Gift boxes</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Discounts</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Watchlist</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Help</a></li>
                         </ul>
                     </div>
                     <div class="navigation-right flex items-center">
                         <div class="currency-options">
-                            <div class="currency-option flex items-center">
+                            <div class="selected currency-option flex items-center">
                                 <div class="option-text font-medium text-dark no-wrap text-sm">English, USD</div>
                                 <span class="option-icon">
                                     <img src="./assets/icons/chevron_down.svg" />
                                 </span>
                             </div>
+                            <div class="currency-options-list bg-white border-gray-200 border-radius-6 scrollbar-y">
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">India, INR</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">Nepal, NPR</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">France, FRANC</div>
+                                </div>
+                                <div class="currency-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm">Canada, Canadian Dollar</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="shipping-options">
-                            <div class="shipping-option flex items-center">
+                            <div class="selected shipping-option flex items-center">
                                 <div class="option-text font-medium text-dark no-wrap text-sm">Ship to</div>
                                 <span class="option-img">
                                     <img src="./assets/images/flag1.png" />
@@ -126,6 +129,39 @@
                                 <span class="option-icon">
                                     <img src="./assets/icons/chevron_down.svg" />
                                 </span>
+                            </div>
+
+                            <div class="shipping-options-list bg-white border-gray-200 border-radius-6 scrollbar-y">
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">us</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/usa.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">au</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/australia.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">dk</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/denmark.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">cn</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/china.png" />
+                                    </span>
+                                </div>
+                                <div class="shipping-option flex items-center">
+                                    <div class="option-text font-medium text-dark no-wrap text-sm uppercase">fr</div>
+                                    <span class="option-img">
+                                        <img src="./assets/images/france.png" />
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,7 +171,7 @@
 
         <main class="products-page">
             <!-- breadcrumb -->
-            <div class="breadcrumb">
+            <div class="breadcrumb theme-py">
                 <div class="container">
                     <nav class="breadcrumb-list flex items-center flex-wrap">
                         <div class="breadcrumb-item"><a href="#" class="text text-base">Home</a></div>
@@ -233,24 +269,26 @@
                                         <img src="./assets/icons/chevron_down.svg" />
                                     </span>
                                 </div>
-                                <div class="slider">
-                                    <div class="progress"></div>
-                                </div>
-                                <div class="range-input">
-                                    <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                                    <input type="range" class="range-max" min="0" max="10000" value="5000" step="100">
-                                </div>
-                                <div class="price-input flex">
-                                    <div class="field flex flex-col">
-                                        <span class="text-sm">Min</span>
-                                        <input type="number" class="input-min" value="2500">
+                                <div class="filt-body">
+                                    <div class="slider">
+                                        <div class="progress"></div>
                                     </div>
-                                    <div class="field flex flex-col">
-                                        <span class="text-sm">Max</span>
-                                        <input type="number" class="input-max" value="5000">
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                        <input type="range" class="range-max" min="0" max="10000" value="5000" step="100">
                                     </div>
+                                    <div class="price-input flex">
+                                        <div class="field flex flex-col">
+                                            <span class="text-sm">Min</span>
+                                            <input type="number" class="input-min" value="2500">
+                                        </div>
+                                        <div class="field flex flex-col">
+                                            <span class="text-sm">Max</span>
+                                            <input type="number" class="input-max" value="5000">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-white">Apply</button>
                                 </div>
-                                <button type="button" class="btn btn-white">Apply</button>
                             </div>
 
                             <div class="filt-features filt-block">
@@ -362,12 +400,12 @@
                             <div>
                                 <div class="filter-tags flex items-center flex-wrap">
                                     <ul class="filter-tags-list flex items-center flex-wrap">
-                                        <li class="tag-item flex items-center text text-sm">Samsung <button type="button"><i class="fas fa-close"></i></button> </li>
-                                        <li class="tag-item flex items-center text text-sm">Apple<button type="button"><i class="fas fa-close"></i></button> </li>
-                                        <li class="tag-item flex items-center text text-sm">Poco<button type="button"><i class="fas fa-close"></i></button> </li>
-                                        <li class="tag-item flex items-center text text-sm">Metallic<button type="button"><i class="fas fa-close"></i></button> </li>
-                                        <li class="tag-item flex items-center text text-sm">4 star<button type="button"><i class="fas fa-close"></i></button> </li>
-                                        <li class="tag-item flex items-center text text-sm">3 star<button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">Samsung <button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">Apple<button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">Poco<button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">Metallic<button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">4 star<button type="button"><i class="fas fa-close"></i></button> </li>
+                                        <li class="tag-item text text-sm">3 star<button type="button"><i class="fas fa-close"></i></button> </li>
                                         <li>
                                             <button type="button" class="btn-link-primary text text-sm btn-clear-filters">Clear all filter</button>
                                         </li>
@@ -808,12 +846,12 @@
         <div class="sidenav-wrapper">
             <div class="sidenav-top grid">
                 <div class="avatar">
-                    <img src="./assets/images/avatar.jpg" alt="" />
+                    <img src="./assets/images/avatar.png" alt="" />
                 </div>
                 <div class="links-group">
-                    <a href="#" class="text-dark text text-base">Sign in</a>
+                    <a href="#" class="text-white text text-base">Sign in</a>
                     <span>|</span>
-                    <a href="#" class="text-dark text text-base">Register</a>
+                    <a href="#" class="text-white text text-base">Register</a>
                 </div>
             </div>
 
@@ -849,15 +887,15 @@
                 </a>
                 <div class="sidenav-item-separator"></div>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-handshake"></i></span>
                     <span class="text text-base text-dark">User agreement</span>
                 </a>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-people-group"></i></span>
                     <span class="text text-base text-dark">Partnership</span>
                 </a>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-shield-halved"></i></span>
                     <span class="text text-base text-dark">Privacy policy</span>
                 </a>
             </div>

@@ -50,6 +50,7 @@
 
   .preview-thumbnail {
     justify-content: space-between;
+
     .thumbnail-item {
       min-width: 68px;
       width: 68px;
@@ -242,7 +243,6 @@
       margin-left: 4px;
 
       .item-img {
-        background-color: #eee;
         width: 100%;
         img {
           max-width: 150px;

@@ -3,8 +3,19 @@
     padding: 6px 0;
     border-top: 1px solid $gray-200;
 
+    &.filt-pricerange{
+      .filt-body{
+        padding-bottom: 12px;
+      }
+    }
+
     @include breakpoint-down(xl){
         border-top: none;
+    }
+
+    @include breakpoint-down(xs){
+      padding-top: 4px;
+      padding-bottom: 4px;
     }
   }
 
@@ -23,8 +34,7 @@
 
   .filt-body{
     @include breakpoint-down(xs){
-      height: 0;
-    overflow: hidden;
+      display: none;
     }
   }
 

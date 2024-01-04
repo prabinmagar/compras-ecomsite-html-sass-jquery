@@ -1,3 +1,5 @@
+// Some important resets
+
 *,
 *::before,
 *::after {
@@ -15,7 +17,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
   height: 100%;

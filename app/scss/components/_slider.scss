@@ -72,18 +72,3 @@
     overflow: hidden;
   }
 }
-
-.banner-slider {
-  margin-bottom: 0 !important;
-  .slick-dots {
-    bottom: 16px;
-
-    li {
-      button {
-        &::before {
-          font-size: 15px;
-        }
-      }
-    }
-  }
-}

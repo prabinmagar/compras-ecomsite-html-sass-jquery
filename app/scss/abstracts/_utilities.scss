@@ -1,8 +1,15 @@
+// utility or reusable classes and stylings
+
 .container {
   max-width: 1280px;
   padding: 0 16px;
   margin: 0 auto;
   width: 100%;
+
+  @include breakpoint-down(xs) {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
 }
 
 /* flexbox and grid */
@@ -37,6 +44,7 @@
     align-items: stretch;
   }
 }
+
 .justify {
   &-center {
     justify-content: center;
@@ -51,6 +59,7 @@
     justify-content: flex-end;
   }
 }
+
 .grid {
   display: grid;
 }
@@ -147,6 +156,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 .no-wrap {
   white-space: nowrap;
 }
@@ -214,17 +224,27 @@
   overflow: hidden;
 }
 
-// hide on mobile screen
+// display
 .hide {
   display: none;
 }
 
+.show {
+  display: block !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+// hide on mobile screen
 .hide-on--ms {
   @include breakpoint-down(lg) {
     display: none;
   }
 }
 
+// show on mobile screen
 .show-on--ms {
   @include breakpoint-down(lg) {
     display: flex !important;
@@ -244,16 +264,19 @@
   }
 }
 
-.show {
-  display: block !important;
-}
+.theme-py {
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-.show-flex {
-  display: flex !important;
-}
+  @include breakpoint-down(lg) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 
-.hide {
-  display: none;
+  @include breakpoint-down(sm) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 // scrollbar

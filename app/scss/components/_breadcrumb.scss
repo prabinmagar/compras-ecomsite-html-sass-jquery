@@ -1,13 +1,13 @@
 .breadcrumb{
-    padding-bottom: 20px;
-    padding-top: 20px;
-
     &-item{
         color: $gray-500;
-
         a{
             &:hover{
                 color: $dark;
+            }
+
+            @include breakpoint-down(xs){
+                font-size: 12px!important;
             }
         }
     }
@@ -19,6 +19,8 @@
 
         @include breakpoint-down(xs){
             margin-right: 0;
+            width: 13px;
+            margin-top: 4px;
         }
     }
 }

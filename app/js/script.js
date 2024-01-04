@@ -1,4 +1,93 @@
 $(document).ready(function () {
+
+  // fixed header on scroll
+  let header = $('.header');
+  let offset = header.offset().top;
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() > offset){
+      $(header).addClass('header-fixed');
+    } else {
+      $(header).removeClass('header-fixed');
+    }
+  })
+
+  $(document).on("click", ".sidenav-show-btn", function (event) {
+    event.stopPropagation();
+    // By using event.stopPropagation(); within the button click event handlers, we prevent the click event from bubbling up to the $(document) handler. This way, clicking the buttons won't immediately trigger the $(document) click handler, and the sidebar should work as expected.
+    sidenav.addClass("show");
+  });
+
+  $(document).on('click', ".sidebar-open-btn--ms", function(event){
+    event.stopPropagation();
+    sidenav.addClass('show');
+  })
+
+  $(document).on("click", ".sidenav-hide-btn", function () {
+    sidenav.removeClass("show");
+  });
+
+  $(document).on("click", function (event) {
+    if (!sidenav.is(event.target) && sidenav.has(event.target).length === 0) {
+      sidenav.removeClass("show");
+    }
+  });
+
+  // Currency options
+  let currencyOptions = $(".currency-options");
+  let currencyOptionsList = $(".currency-options-list");
+
+  $(currencyOptions).click(function (event) {
+    event.stopPropagation();
+    $(currencyOptionsList).toggleClass("show");
+    $(currencyOptionsList)
+      .find(".currency-option")
+      .each(function (index, optionElem) {
+        $(optionElem).click(function () {
+          let optionText = $(optionElem).find(".option-text").text();
+          $(".selected.currency-option").find(".option-text").text(optionText);
+        });
+      });
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !currencyOptions.is(event.target) &&
+      sidenav.has(event.target).length === 0
+    ) {
+      currencyOptionsList.removeClass("show");
+    }
+  });
+
+  let shippingOptions = $(".shipping-options");
+  let shippingOptionsList = $(".shipping-options-list");
+
+  $(shippingOptions).click(function (event) {
+    event.stopPropagation();
+    $(shippingOptionsList).toggleClass("show");
+    $(shippingOptionsList)
+      .find(".shipping-option")
+      .each(function (index, shippingElem) {
+        $(shippingElem).click(function () {
+          let shippingFlagUrl = $(shippingElem)
+            .find(".option-img img")
+            .attr("src");
+          $(".selected.shipping-option")
+            .find(".option-img img")
+            .attr("src", shippingFlagUrl);
+        });
+      });
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !shippingOptions.is(event.target) &&
+      sidenav.has(event.target).length === 0
+    ) {
+      shippingOptionsList.removeClass("show");
+    }
+  });
+
   // slick sliders
   $(".banner-slider").slick({
     arrows: false,
@@ -6,6 +95,7 @@ $(document).ready(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    adaptiveHeight: true
   });
 
   $(".offers-slider").slick({
@@ -202,81 +292,14 @@ $(document).ready(function () {
     }
   });
 
-  $(document).on("click", ".sidenav-show-btn", function (event) {
-    event.stopPropagation();
-    // By using event.stopPropagation(); within the button click event handlers, we prevent the click event from bubbling up to the $(document) handler. This way, clicking the buttons won't immediately trigger the $(document) click handler, and the sidebar should work as expected.
-    sidenav.addClass("show");
+  $('.filt-head').each(function(index, filtHead){
+    $(filtHead).click(function(){
+      let filtBlock= $(this).parent();
+      $(filtBlock).find('.filt-body').slideToggle();
+    });
   });
 
-  $(document).on('click', ".sidebar-open-btn--ms", function(event){
-    event.stopPropagation();
-    sidenav.addClass('show');
-  })
-
-  $(document).on("click", ".sidenav-hide-btn", function () {
-    sidenav.removeClass("show");
-  });
-
-  $(document).on("click", function (event) {
-    if (!sidenav.is(event.target) && sidenav.has(event.target).length === 0) {
-      sidenav.removeClass("show");
-    }
-  });
-
-  // Currency options
-  let currencyOptions = $(".currency-options");
-  let currencyOptionsList = $(".currency-options-list");
-
-  $(currencyOptions).click(function (event) {
-    event.stopPropagation();
-    $(currencyOptionsList).toggleClass("show");
-    $(currencyOptionsList)
-      .find(".currency-option")
-      .each(function (index, optionElem) {
-        $(optionElem).click(function () {
-          let optionText = $(optionElem).find(".option-text").text();
-          $(".selected.currency-option").find(".option-text").text(optionText);
-        });
-      });
-  });
-
-  $(document).on("click", function (event) {
-    if (
-      !currencyOptions.is(event.target) &&
-      sidenav.has(event.target).length === 0
-    ) {
-      currencyOptionsList.removeClass("show");
-    }
-  });
-
-  let shippingOptions = $(".shipping-options");
-  let shippingOptionsList = $(".shipping-options-list");
-
-  $(shippingOptions).click(function (event) {
-    event.stopPropagation();
-    $(shippingOptionsList).toggleClass("show");
-    $(shippingOptionsList)
-      .find(".shipping-option")
-      .each(function (index, shippingElem) {
-        $(shippingElem).click(function () {
-          let shippingFlagUrl = $(shippingElem)
-            .find(".option-img img")
-            .attr("src");
-          $(".selected.shipping-option")
-            .find(".option-img img")
-            .attr("src", shippingFlagUrl);
-        });
-      });
-  });
-
-  $(document).on("click", function (event) {
-    if (
-      !shippingOptions.is(event.target) &&
-      sidenav.has(event.target).length === 0
-    ) {
-      shippingOptionsList.removeClass("show");
-    }
-  });
+  
 
   // filter tags pills
   const filterTagsList = $(".filter-tags-list");

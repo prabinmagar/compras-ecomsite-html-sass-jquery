@@ -16,9 +16,10 @@
 </head>
 <body>
     <div class="page-wrapper">
+        <!-- header => header.scss -->
         <header class="header">
             <div class="header-content">
-                <div class="container header-top flex items-center justify">
+                <div class="container header-top flex items-center justify theme-py">
                     <div class="flex items-center site-brand-wrapper">
                         <button type="button" class="sidebar-open-btn--ms">
                             <img src="./assets/icons/menu.svg" alt="" />
@@ -49,37 +50,37 @@
                     </div>
 
                     <ul class="hdr-navigation-bar flex items-end hide-on--ms">
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/profile.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Profile</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/message.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Message</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="#" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/heart.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">Orders</span>
-                        </li>
-                        <li class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
+                        </a></li>
+                        <li><a href="cart.html" class="hdr-nav-item flex items-center justify-center flex-wrap flex-col">
                             <div class="hdr-nav-icon flex items-center justify-center">
                                 <img src="./assets/icons/cart.svg" />
                             </div>
                             <span class="text-xs text-gray-500 text-center hdr-nav-text">My Cart</span>
-                        </li>
+                        </a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="navigation hide-on--ms">
+            <div class="navigation">
                 <div class="navigation-content container flex items-center justify-between">
-                    <div class="navigation-left flex items-center">
+                    <div class="navigation-left flex items-center hide-on--ms">
                         <button type="button" class="sidenav-show-btn">
                             <img src="./assets/icons/menu.svg" />
                         </button>
@@ -89,8 +90,7 @@
                             <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Gift boxes</a></li>
                             <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Discounts</a></li>
                             <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Watchlist</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark flex items-center no-wrap">Help <img src="./assets/icons/chevron_down.svg" class="menu-dropdown-icon" /></a>
-                            </li>
+                            <li class="menu-item"><a href="#" class="menu-link font-semibold text text-dark no-wrap">Help</a></li>
                         </ul>
                     </div>
                     <div class="navigation-right flex items-center">
@@ -164,6 +164,7 @@
                 </div>
             </div>
         </header>
+        <!-- end of header -->
 
         <main class="home-page">
             <section class="top-main">
@@ -181,22 +182,12 @@
                             <a href="#" class="category-item text text-base border-radius-6 flex no-wrap items-center">More category</a>
                         </div>
     
-                        <div class="banner-slider">
-                            <div class="slider-item h-full">
-                                <img src="./assets/images/banner.png" alt="" />
-                                <div class="slider-item-content">
-                                    <p class="slider-item-text font-semibold">Latest trending</p>
-                                    <h2 class="slider-item-title font-bold">Electronic items</h2>
-                                    <a href="" class="btn btn-white">Learn more</a>
-                                </div>
-                            </div>
-                            <div class="slider-item h-full">
-                                <img src="./assets/images/banner2.jpg" alt=""/>
-                                <div class="slider-item-content">
-                                    <p class="slider-item-text font-semibold">Latest trending</p>
-                                    <h2 class="slider-item-title font-bold">Electronic items</h2>
-                                    <a href="" class="btn btn-white">Learn more</a>
-                                </div>
+                        <div class="banner">
+                            <img src="./assets/images/banner.png" alt="" />
+                            <div class="banner-content">
+                                <p class="banner-text font-semibold">Latest trending</p>
+                                <h2 class="banner-title font-bold">Electronic items</h2>
+                                <a href="" class="btn btn-white">Learn more</a>
                             </div>
                         </div>
     
@@ -816,9 +807,9 @@
             <div class="container">
                 <div class="footer-content grid">
                     <div class="footer-item">
-                        <a href="#" class="site-brand flex items-center">
-                            <img src="./assets/icons/site_logo.svg" class="brand-icon" />
-                            <img src="./assets/icons/brand.svg" class="brand-text" />
+                        <a href="index.html" class="site-brand flex items-center">
+                            <!-- <img src="./assets/icons/site_logo.svg" class="brand-icon" /> -->
+                            <span class="brand-text font-bold">Com<span class="text-blue">pras.</span></span>
                         </a>
                         <p class="text text-gray-600 brand-intro text-base">Best information about the company gies here but now lorem ipsum is</p>
                         <ul class="social-links flex">
@@ -892,12 +883,12 @@
         <div class="sidenav-wrapper">
             <div class="sidenav-top grid">
                 <div class="avatar">
-                    <img src="./assets/images/avatar.jpg" alt="" />
+                    <img src="./assets/images/avatar.png" alt="" />
                 </div>
                 <div class="links-group">
-                    <a href="#" class="text-dark text text-base">Sign in</a>
+                    <a href="#" class="text-white text text-base">Sign in</a>
                     <span>|</span>
-                    <a href="#" class="text-dark text text-base">Register</a>
+                    <a href="#" class="text-white text text-base">Register</a>
                 </div>
             </div>
 
@@ -933,15 +924,15 @@
                 </a>
                 <div class="sidenav-item-separator"></div>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-handshake"></i></span>
                     <span class="text text-base text-dark">User agreement</span>
                 </a>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-people-group"></i></span>
                     <span class="text text-base text-dark">Partnership</span>
                 </a>
                 <a href="#" class="sidenav-item grid">
-                    <span></span>
+                    <span class="sidenav-item-icon"><i class="fa-solid fa-shield-halved"></i></span>
                     <span class="text text-base text-dark">Privacy policy</span>
                 </a>
             </div>
